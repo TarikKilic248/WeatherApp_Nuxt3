@@ -1,12 +1,7 @@
 <script setup lang="ts">
 const weatherStore = useWeatherStore();
 
-interface Suggestion {
-  type: string;
-  title: string;
-  description: string;
-  icon: string;
-}
+
 
 const suggestions = computed(() => {
   const city = weatherStore.weatherData.city;

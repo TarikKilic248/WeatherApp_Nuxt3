@@ -1,20 +1,13 @@
-import { defineStore } from 'pinia';
+import { defineStore } from "pinia";
+import type { WeatherData } from "~/types";
 
-interface WeatherData {
-  city: string;
-  temperature: number;
-  condition: string;
-  humidity: number;
-  windSpeed: number;
-}
-
-export const useWeatherStore = defineStore('weather', () => {
+export const useWeatherStore = defineStore("weather", () => {
   const weatherData = ref<WeatherData>({
-    city: '',
+    city: "",
     temperature: 0,
-    condition: '',
+    condition: "",
     humidity: 0,
-    windSpeed: 0
+    windSpeed: 0,
   });
   const isProcessing = ref(false);
   const errorMessage = ref<string | null>(null);
@@ -32,7 +25,7 @@ export const useWeatherStore = defineStore('weather', () => {
       );
 
       if (!response.ok) {
-        throw new Error('Hava durumu bilgisi alınamadı');
+        throw new Error("Hava durumu bilgisi alınamadı");
       }
 
       const data = await response.json();
@@ -45,15 +38,15 @@ export const useWeatherStore = defineStore('weather', () => {
         windSpeed: data.current.wind_kph,
       };
     } catch (error) {
-      console.error('Weather API Error:', error);
+      console.error("Weather API Error:", error);
       errorMessage.value =
-        error instanceof Error ? error.message : 'Bir hata oluştu';
+        error instanceof Error ? error.message : "Bir hata oluştu";
       weatherData.value = {
-        city: '',
+        city: "",
         temperature: 0,
-        condition: '',
+        condition: "",
         humidity: 0,
-        windSpeed: 0
+        windSpeed: 0,
       };
     } finally {
       isProcessing.value = false;
