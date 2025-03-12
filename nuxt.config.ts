@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     public: {
       weatherApiKey:
         process.env.WEATHER_API_KEY || "7e7b26cd438f40c480f85449250803",
+      geminiApiKey:
+        process.env.GEMINI_API_KEY || "AIzaSyC3p2yzwqWPF9miylAoGC0FvQC5PhZLtjo",
     },
   },
 });
