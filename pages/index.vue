@@ -1,5 +1,4 @@
 <script setup>
-<<<<<<< HEAD
 const isMobile = ref(false);
 
 onMounted(() => {
@@ -38,13 +37,5 @@ onMounted(() => {
         </div>
       </div>
     </div>
-=======
-</script>
-
-<template>
-  <div>
-    <AppHeader />
-    <weatherCard></weatherCard>
->>>>>>> bc6a15e8a7d9d351254486045a7acbeed5289e00
   </div>
 </template>

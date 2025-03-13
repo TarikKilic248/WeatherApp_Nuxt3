@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Kayıtlı konumlar için bir tane stores/ klasöründe bir yapı oluştur. Bu yapıda
 1- Şehirlerin bilgilerini burada tut.
 2- Şehir ekleme çıkarma işlemleri burada olsun
@@ -7,8 +6,6 @@ Kayıtlı konumlar için bir tane stores/ klasöründe bir yapı oluştur. Bu ya
 
 Tüm componentlerdeki şehir bilgilerini stores/ de oluşturacağın dosyadan bilgileri alarak yapılsın.
 
-=======
->>>>>>> bc6a15e8a7d9d351254486045a7acbeed5289e00
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

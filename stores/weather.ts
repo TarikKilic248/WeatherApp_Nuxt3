@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { defineStore } from "pinia";
 import type { WeatherData } from "~/types";
 
@@ -9,25 +8,6 @@ export const useWeatherStore = defineStore("weather", () => {
     condition: "",
     humidity: 0,
     windSpeed: 0,
-=======
-import { defineStore } from 'pinia';
-
-interface WeatherData {
-  city: string;
-  temperature: number;
-  condition: string;
-  humidity: number;
-  windSpeed: number;
-}
-
-export const useWeatherStore = defineStore('weather', () => {
-  const weatherData = ref<WeatherData>({
-    city: '',
-    temperature: 0,
-    condition: '',
-    humidity: 0,
-    windSpeed: 0
->>>>>>> bc6a15e8a7d9d351254486045a7acbeed5289e00
   });
   const isProcessing = ref(false);
   const errorMessage = ref<string | null>(null);
@@ -45,11 +25,7 @@ export const useWeatherStore = defineStore('weather', () => {
       );
 
       if (!response.ok) {
-<<<<<<< HEAD
         throw new Error("Hava durumu bilgisi alınamadı");
-=======
-        throw new Error('Hava durumu bilgisi alınamadı');
->>>>>>> bc6a15e8a7d9d351254486045a7acbeed5289e00
       }
 
       const data = await response.json();
@@ -62,7 +38,6 @@ export const useWeatherStore = defineStore('weather', () => {
         windSpeed: data.current.wind_kph,
       };
     } catch (error) {
-<<<<<<< HEAD
       console.error("Weather API Error:", error);
       errorMessage.value =
         error instanceof Error ? error.message : "Bir hata oluştu";
@@ -72,17 +47,6 @@ export const useWeatherStore = defineStore('weather', () => {
         condition: "",
         humidity: 0,
         windSpeed: 0,
-=======
-      console.error('Weather API Error:', error);
-      errorMessage.value =
-        error instanceof Error ? error.message : 'Bir hata oluştu';
-      weatherData.value = {
-        city: '',
-        temperature: 0,
-        condition: '',
-        humidity: 0,
-        windSpeed: 0
->>>>>>> bc6a15e8a7d9d351254486045a7acbeed5289e00
       };
     } finally {
       isProcessing.value = false;
@@ -95,8 +59,4 @@ export const useWeatherStore = defineStore('weather', () => {
     isProcessing,
     errorMessage,
   };
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> bc6a15e8a7d9d351254486045a7acbeed5289e00
