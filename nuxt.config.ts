@@ -2,13 +2,16 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/color-mode", "@nuxt/ui"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@pinia/nuxt",
+    "@nuxtjs/color-mode",
+    "@nuxt/ui",
+  ],
   runtimeConfig: {
     public: {
-      weatherApiKey:
-        process.env.WEATHER_API_KEY || "7e7b26cd438f40c480f85449250803",
-      geminiApiKey:
-        process.env.GEMINI_API_KEY || "AIzaSyC3p2yzwqWPF9miylAoGC0FvQC5PhZLtjo",
+      weatherApiKey: process.env.WEATHER_API_KEY,
+      geminiApiKey: process.env.GEMINI_API_KEY,
     },
   },
   colorMode: {
