@@ -167,6 +167,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
         <!-- Error Message -->
         <div
@@ -179,3 +180,17 @@ onMounted(async () => {
     </div>
   </div>
 </template>
+=======
+      </div>
+
+      <!-- Error Message -->
+      <div
+        v-if="weatherStore.errorMessage"
+        class="p-4 text-red-600 text-center"
+      >
+        {{ weatherStore.errorMessage }}
+      </div>
+    </div>
+  </div>
+</template>
+>>>>>>> bc6a15e8a7d9d351254486045a7acbeed5289e00
