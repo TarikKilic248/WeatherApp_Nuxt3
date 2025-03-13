@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Suggestion } from '~/types';
+
 const weatherStore = useWeatherStore();
 
 
@@ -10,7 +12,7 @@ const suggestions = computed(() => {
 
   const suggestions: Suggestion[] = [];
 
-  if (city === 'Istanbul' || city === 'İstanbul') {
+  if (city === 'Istanbul' || city === 'Bursa') {
     if (temperature > 20 && !condition.includes('yağmur')) {
       suggestions.push(
         {
